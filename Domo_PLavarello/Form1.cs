@@ -1,17 +1,25 @@
-﻿using System;
+﻿using Domo_SQL;
+using System;
 using System.Drawing;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
 namespace Domo_PLavarello {
     public partial class Form1 : Form {
+        DatabaseConnection conexionSQL = new DatabaseConnection();
         static MqttClient cliente;
         string mqtt_server = "broker.hivemq.com";
         int mqtt_port = 1883;
         string mqtt_user = null;
         string mqtt_pass = null;
+
+        Color colorTextos = ColorTranslator.FromHtml("#2A2523");
+        Color colorAmarillo = ColorTranslator.FromHtml("#FD9A00");
+        Color colorVerde = ColorTranslator.FromHtml("#7DCF00");
+        Color colorRojo = ColorTranslator.FromHtml("#E70808");
 
 
         public Form1() {
@@ -19,7 +27,15 @@ namespace Domo_PLavarello {
         }
 
         private void Form1_Load(object sender, EventArgs e) {
+            
+            // aplicamos estilos
+            this.BackColor = ColorTranslator.FromHtml("#78706B");
+            lblTitulo.ForeColor = colorTextos;
+            lblMQTT.ForeColor = colorTextos;
+            lblMSSQL.ForeColor = colorTextos;
+            // conetamos servicios
             ConectarMQTT();
+            ProbarSQL();
         }
 
         private void ConectarMQTT() {
@@ -28,8 +44,8 @@ namespace Domo_PLavarello {
                     cliente.Disconnect();
                 }
 
-                lblEstado1.Text = "Conectando";
-                lblEstado1.ForeColor = Color.Yellow;
+                lblEstado1.Text = "Conectando...";
+                lblEstado1.ForeColor = colorAmarillo;
 
                 cliente = new MqttClient(mqtt_server, mqtt_port, false, MqttSslProtocols.None, null, null);
                 cliente.ProtocolVersion = MqttProtocolVersion.Version_3_1;
@@ -38,7 +54,7 @@ namespace Domo_PLavarello {
 
                 if (conexion == 0) {
                     lblEstado1.Text = "Conectado";
-                    lblEstado1.ForeColor = Color.Green;
+                    lblEstado1.ForeColor = colorVerde;
                     // registramos el callback
                     cliente.MqttMsgPublishReceived += MQTT_mensajeRecivido;
                     // nos suscribimos a los topics
@@ -51,7 +67,7 @@ namespace Domo_PLavarello {
 
                 } else {
                     lblEstado1.Text = "Desconectado";
-                    lblEstado1.ForeColor = Color.Red;
+                    lblEstado1.ForeColor = colorRojo;
                 }
             } catch (Exception ex) {
                 lblEstado1.Text = "Error de conexión";
@@ -63,9 +79,23 @@ namespace Domo_PLavarello {
         private void DesconectarMQTT() {
             if (cliente != null && cliente.IsConnected) {
                 lblEstado1.Text = "Desconectado";
-                lblEstado1.ForeColor = Color.Red;
+                lblEstado1.ForeColor = colorRojo;
                 cliente.Disconnect();
                 cliente = null;
+            }
+        }
+
+        private async Task ProbarSQL() {
+            lblEstado2.Text = "Conectando...";
+            lblEstado2.ForeColor = colorAmarillo;
+            // probamos la conexion
+            bool conectado = await conexionSQL.ProbarConexionAsync();
+            if(!conectado) {
+                lblEstado2.Text = "Desconectado";
+                lblEstado2.ForeColor = colorRojo;
+            } else {
+                lblEstado2.Text = "Conectado";
+                lblEstado2.ForeColor = colorVerde;
             }
         }
 

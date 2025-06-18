@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domo_PLavarello", "Domo_PLa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domo_Admin", "Domo_Admin\Domo_Admin.csproj", "{D542A7D5-2ED7-4EE6-9ADD-E3ED8E3C7412}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domo_SQL", "Domo_SQL\Domo_SQL.csproj", "{C058EB99-715C-4FBC-8FD1-81A6C9E17FFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domo_Entidad", "Domo_Entidad\Domo_Entidad.csproj", "{C682F65C-AAB8-4399-8672-FD7DB827911E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D542A7D5-2ED7-4EE6-9ADD-E3ED8E3C7412}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D542A7D5-2ED7-4EE6-9ADD-E3ED8E3C7412}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D542A7D5-2ED7-4EE6-9ADD-E3ED8E3C7412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C058EB99-715C-4FBC-8FD1-81A6C9E17FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C058EB99-715C-4FBC-8FD1-81A6C9E17FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C058EB99-715C-4FBC-8FD1-81A6C9E17FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C058EB99-715C-4FBC-8FD1-81A6C9E17FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C682F65C-AAB8-4399-8672-FD7DB827911E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C682F65C-AAB8-4399-8672-FD7DB827911E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C682F65C-AAB8-4399-8672-FD7DB827911E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C682F65C-AAB8-4399-8672-FD7DB827911E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
