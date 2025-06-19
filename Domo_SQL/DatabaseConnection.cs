@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Threading.Tasks;
 
 namespace Domo_SQL {
     public class DatabaseConnection {
-        string _connectionString = "Server=localhost;Database=MiBaseDatos;User Id=sa;Password=clave;TrustServerCertificate=true";
+        string _connectionString = "Server=localhost;Database=domo;User Id=sa;Password=pepito123;TrustServerCertificate=true;";
 
         public async Task<IDbConnection> GetOpenConnectionAsync() {
             try {
