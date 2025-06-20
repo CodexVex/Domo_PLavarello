@@ -1,3 +1,7 @@
+CREATE DATABASE domo;
+
+USE domo;
+
 CREATE TABLE [Domo] (
 	[id_domo] int IDENTITY(1,1) NOT NULL UNIQUE,
 	[nombre] nvarchar(50) NOT NULL,
