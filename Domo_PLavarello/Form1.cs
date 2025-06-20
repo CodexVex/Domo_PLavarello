@@ -1,4 +1,5 @@
-﻿using Domo_SQL;
+﻿using Domo_Entidad;
+using Domo_SQL;
 using System;
 using System.Drawing;
 using System.Text;
@@ -27,7 +28,6 @@ namespace Domo_PLavarello {
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-            
             // aplicamos estilos
             this.BackColor = ColorTranslator.FromHtml("#78706B");
             lblTitulo.ForeColor = colorTextos;
@@ -102,9 +102,18 @@ namespace Domo_PLavarello {
         private void MQTT_mensajeRecivido(object sender, MqttMsgPublishEventArgs e) {
             string topic = e.Topic;
             string value = Encoding.UTF8.GetString(e.Message);
-            //todo: manejar el paquete y guardar los datos
-            string mensaje = "Topic: " + topic + " | Valor: " + value;
-            MessageBox.Show(mensaje);
+            // vemos si es una trama DOMO
+            var trama = new TramaDOMO(value);
+            if (trama.esValida()) {
+                DatosDOMO datos = trama.obtenerDatos();
+                // guardamos en la DB
+                DatoSensorSQL sensorSQL = new DatoSensorSQL();
+                sensorSQL.insertarDatos(datos);
+            } else {
+                string mensaje = "Topic: " + topic + " | Valor: " + value;
+                MessageBox.Show(mensaje);
+            }
+               
         }
 
         // cuando se cierra el formulario

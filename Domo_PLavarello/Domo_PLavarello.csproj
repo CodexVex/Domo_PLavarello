@@ -179,6 +179,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TramaDOMO.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +207,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domo_Entidad\Domo_Entidad.csproj">
+      <Project>{c682f65c-aab8-4399-8672-fd7db827911e}</Project>
+      <Name>Domo_Entidad</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domo_SQL\Domo_SQL.csproj">
       <Project>{c058eb99-715c-4fbc-8fd1-81a6c9e17ffe}</Project>
       <Name>Domo_SQL</Name>
