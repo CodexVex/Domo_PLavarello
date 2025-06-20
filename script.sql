@@ -55,3 +55,5 @@ ALTER TABLE [Parametro_Perfil] ADD CONSTRAINT [Parametro_Perfil_fk1] FOREIGN KEY
 
 INSERT INTO [domo].[dbo].[Domo] (nombre, ubicacion, fecha_creacion)
 VALUES ('Domo GAL', 'Av. Bohemia Tacneña #95', GETDATE());
+
+SELECT* from Data_Sensores

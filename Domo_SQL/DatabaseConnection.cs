@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Domo_SQL {
     public class DatabaseConnection {
-        string _connectionString = "Server=localhost;Database=domo;User Id=sa;Password=pepito123;TrustServerCertificate=true;";
+        string _connectionString = "Server=localhost;Database=domo;User Id=sa;Password=epis;TrustServerCertificate=true;";
 
         public async Task<IDbConnection> GetOpenConnectionAsync() {
             try {
