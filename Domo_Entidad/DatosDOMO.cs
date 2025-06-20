@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Domo_Entidad {
     public class DatosDOMO {
-        public float humedadAmbiente { get; set; }
+        public int id_domo { get; set; }
         public float temperatura { get; set; }
-        public int humedadTierra { get; set; }
-        public bool ventanaAbierta { get; set; }
-        public bool ventiladorEncendido { get; set; }
-        public int posicionServo { get; set; }
+        public int humedad_tierra { get; set; }
+        public float humedad_ambiente { get; set; }
+        public float ph { get; set; }
+        public bool estado_ventana { get; set; }
+        public bool estado_ventilador { get; set; }
+
+        public int posicion_servo { get; set; }
     }
 }

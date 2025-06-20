@@ -33,7 +33,7 @@ namespace Domo_SQL {
                 using (var reader = await command.ExecuteReaderAsync()) {
                     while (await reader.ReadAsync()) {
                         datos.Add(new DatosDOMO {
-                            humedadAmbiente = reader.GetInt32(reader.GetOrdinal("humedad_ambiente")),
+                            humedad_ambiente = reader.GetInt32(reader.GetOrdinal("humedad_ambiente")),
                             //ph = reader.GetString(reader.GetOrdinal("ph"))
                         });
                     }
@@ -73,11 +73,11 @@ namespace Domo_SQL {
                 command.CommandType = CommandType.Text;
                 command.Parameters.AddWithValue("@id_domo", 1);
                 command.Parameters.AddWithValue("@temperatura", datos.temperatura);
-                command.Parameters.AddWithValue("@humedad_tierra", datos.humedadTierra);
-                command.Parameters.AddWithValue("@humedad_ambiente", datos.humedadAmbiente);
+                command.Parameters.AddWithValue("@humedad_tierra", datos.humedad_tierra);
+                command.Parameters.AddWithValue("@humedad_ambiente", datos.humedad_ambiente);
                 command.Parameters.AddWithValue("@ph", 0); // Puedes ajustar si tienes sensor de pH
-                command.Parameters.AddWithValue("@estado_ventilador", datos.ventiladorEncendido);
-                command.Parameters.AddWithValue("@estado_ventana", datos.ventanaAbierta);
+                command.Parameters.AddWithValue("@estado_ventilador", datos.estado_ventilador);
+                command.Parameters.AddWithValue("@estado_ventana", datos.estado_ventana);
                 command.Parameters.AddWithValue("@fecha", DateTime.Now);
 
                 try {

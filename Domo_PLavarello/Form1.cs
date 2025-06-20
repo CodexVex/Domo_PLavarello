@@ -2,6 +2,7 @@
 using Domo_SQL;
 using System;
 using System.Drawing;
+using System.Globalization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,8 +29,10 @@ namespace Domo_PLavarello {
         }
 
         private void Form1_Load(object sender, EventArgs e) {
+            lblUltimoMensaje.Text = "";
             // aplicamos estilos
             this.BackColor = ColorTranslator.FromHtml("#78706B");
+            lblUltimoMensaje.ForeColor = colorTextos;
             lblTitulo.ForeColor = colorTextos;
             lblMQTT.ForeColor = colorTextos;
             lblMSSQL.ForeColor = colorTextos;
@@ -56,7 +59,7 @@ namespace Domo_PLavarello {
                     lblEstado1.Text = "Conectado";
                     lblEstado1.ForeColor = colorVerde;
                     // registramos el callback
-                    cliente.MqttMsgPublishReceived += MQTT_mensajeRecivido;
+                    cliente.MqttMsgPublishReceived += MQTT_mensajeRecibido;
                     // nos suscribimos a los topics
                     string[] topics = new string[1];
                     topics[0] = "domo/domodata";
@@ -99,7 +102,7 @@ namespace Domo_PLavarello {
             }
         }
 
-        private void MQTT_mensajeRecivido(object sender, MqttMsgPublishEventArgs e) {
+        private void MQTT_mensajeRecibido(object sender, MqttMsgPublishEventArgs e) {
             string topic = e.Topic;
             string value = Encoding.UTF8.GetString(e.Message);
             // vemos si es una trama DOMO
@@ -109,6 +112,7 @@ namespace Domo_PLavarello {
                 // guardamos en la DB
                 DatoSensorSQL sensorSQL = new DatoSensorSQL();
                 sensorSQL.insertarDatos(datos);
+                actualizarMensaje();
             } else {
                 string mensaje = "Topic: " + topic + " | Valor: " + value;
                 MessageBox.Show(mensaje);
@@ -121,5 +125,23 @@ namespace Domo_PLavarello {
             // desconectamos del servidor MQTT
             DesconectarMQTT();
         }
+
+        private void actualizarMensaje() {
+            DateTime ahora = DateTime.Now;
+            CultureInfo cultura = new CultureInfo("es-ES");
+            TextInfo texto = cultura.TextInfo;
+
+            string diaSemana = texto.ToTitleCase(cultura.DateTimeFormat.GetDayName(ahora.DayOfWeek));
+            string mes = texto.ToTitleCase(cultura.DateTimeFormat.GetMonthName(ahora.Month));
+            string hora = ahora.ToString("h:mm:ss tt", CultureInfo.InvariantCulture); // Incluye segundos
+
+            string mensaje = $"Última Trama: {diaSemana} {ahora.Day} de {mes} del {ahora.Year} a las {hora}";
+
+            lblUltimoMensaje.Invoke(new Action(() =>
+            {
+                lblUltimoMensaje.Text = mensaje;
+            }));
+        }
+
     }
 }

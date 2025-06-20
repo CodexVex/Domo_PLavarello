@@ -71,21 +71,21 @@ namespace Domo_PLavarello {
 
             try {
                 DatosDOMO datos = new DatosDOMO {
-                    humedadAmbiente = float.Parse(partes[1]),
+                    humedad_ambiente = float.Parse(partes[1]),
                     temperatura = float.Parse(partes[2]),
-                    humedadTierra = int.Parse(partes[3]),
-                    ventanaAbierta = partes[4] == "1",
-                    ventiladorEncendido = partes[5] == "1",
-                    posicionServo = int.Parse(partes[6])
+                    humedad_tierra = int.Parse(partes[3]),
+                    estado_ventana = partes[4] == "1",
+                    estado_ventilador = partes[5] == "1",
+                    posicion_servo = int.Parse(partes[6])
                 };
 
                 Console.WriteLine("📤 Datos extraídos correctamente:");
-                Console.WriteLine($" - HumedadAmbiente: {datos.humedadAmbiente}");
+                Console.WriteLine($" - HumedadAmbiente: {datos.temperatura}");
                 Console.WriteLine($" - Temperatura: {datos.temperatura}");
-                Console.WriteLine($" - HumedadTierra: {datos.humedadTierra}");
-                Console.WriteLine($" - VentanaAbierta: {datos.ventanaAbierta}");
-                Console.WriteLine($" - VentiladorEncendido: {datos.ventiladorEncendido}");
-                Console.WriteLine($" - PosicionServo: {datos.posicionServo}");
+                Console.WriteLine($" - HumedadTierra: {datos.humedad_tierra}");
+                Console.WriteLine($" - VentanaAbierta: {datos.estado_ventana}");
+                Console.WriteLine($" - VentiladorEncendido: {datos.estado_ventilador}");
+                Console.WriteLine($" - PosicionServo: {datos.posicion_servo}");
 
                 return datos;
             } catch {

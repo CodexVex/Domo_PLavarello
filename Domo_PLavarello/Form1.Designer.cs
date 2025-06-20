@@ -33,6 +33,7 @@
             this.lblEstado1 = new System.Windows.Forms.Label();
             this.lblEstado2 = new System.Windows.Forms.Label();
             this.lblMSSQL = new System.Windows.Forms.Label();
+            this.lblUltimoMensaje = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -85,11 +86,22 @@
             this.lblMSSQL.TabIndex = 4;
             this.lblMSSQL.Text = "MSSQL:";
             // 
+            // lblUltimoMensaje
+            // 
+            this.lblUltimoMensaje.AutoSize = true;
+            this.lblUltimoMensaje.Location = new System.Drawing.Point(9, 105);
+            this.lblUltimoMensaje.Name = "lblUltimoMensaje";
+            this.lblUltimoMensaje.Size = new System.Drawing.Size(35, 13);
+            this.lblUltimoMensaje.TabIndex = 5;
+            this.lblUltimoMensaje.Text = "label1";
+            this.lblUltimoMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 416);
+            this.ClientSize = new System.Drawing.Size(332, 128);
+            this.Controls.Add(this.lblUltimoMensaje);
             this.Controls.Add(this.lblMSSQL);
             this.Controls.Add(this.lblEstado2);
             this.Controls.Add(this.lblEstado1);
@@ -113,6 +125,7 @@
         private System.Windows.Forms.Label lblEstado1;
         private System.Windows.Forms.Label lblEstado2;
         private System.Windows.Forms.Label lblMSSQL;
+        private System.Windows.Forms.Label lblUltimoMensaje;
     }
 }
 
