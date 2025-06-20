@@ -51,7 +51,6 @@ namespace Domo_SQL {
 				temperatura,
 				humedad_tierra,
 				humedad_ambiente,
-				ph,
 				estado_ventilador,
 				estado_ventana,
 				fecha
@@ -62,7 +61,6 @@ namespace Domo_SQL {
 				@temperatura,
 				@humedad_tierra,
 				@humedad_ambiente,
-				@ph,
 				@estado_ventilador,
 				@estado_ventana,
 				@fecha
@@ -75,7 +73,6 @@ namespace Domo_SQL {
                 command.Parameters.AddWithValue("@temperatura", datos.temperatura);
                 command.Parameters.AddWithValue("@humedad_tierra", datos.humedad_tierra);
                 command.Parameters.AddWithValue("@humedad_ambiente", datos.humedad_ambiente);
-                command.Parameters.AddWithValue("@ph", 0); // Puedes ajustar si tienes sensor de pH
                 command.Parameters.AddWithValue("@estado_ventilador", datos.estado_ventilador);
                 command.Parameters.AddWithValue("@estado_ventana", datos.estado_ventana);
                 command.Parameters.AddWithValue("@fecha", DateTime.Now);
