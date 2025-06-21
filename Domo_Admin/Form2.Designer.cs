@@ -29,6 +29,7 @@ namespace Domo_Admin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
@@ -47,30 +48,259 @@ namespace Domo_Admin
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panelInfoDomo = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblUltimoEnvioDomo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblUbicacionDomo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblNombreDomo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panelNav = new Guna.UI2.WinForms.Guna2Panel();
+            this.cmbSeleccionarDispositivo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnBuscarDispositivo = new Guna.UI2.WinForms.Guna2Button();
+            this.chartInfoDomo = new Guna.Charts.WinForms.GunaChart();
+            this.dgvHistorialDatosDomo = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnExportarExcel = new Guna.UI2.WinForms.Guna2Button();
+            this.selecFecha = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnCultivos = new Guna.UI2.WinForms.Guna2Button();
             this.btnDomos = new Guna.UI2.WinForms.Guna2Button();
             this.btnReportes = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.panelClimaHoy = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panelNav = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.panelClimaHoy.SuspendLayout();
+            this.lblUltimaTemperatura = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblUltimaHumedadAmb = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblUltimaHumedadTierra = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panelInfoDomo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialDatosDomo)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panelInfoDomo
+            // 
+            this.panelInfoDomo.BackColor = System.Drawing.Color.Transparent;
+            this.panelInfoDomo.BorderRadius = 6;
+            this.panelInfoDomo.Controls.Add(this.lblUltimaHumedadTierra);
+            this.panelInfoDomo.Controls.Add(this.lblUltimaHumedadAmb);
+            this.panelInfoDomo.Controls.Add(this.lblUltimaTemperatura);
+            this.panelInfoDomo.Controls.Add(this.lblUltimoEnvioDomo);
+            this.panelInfoDomo.Controls.Add(this.lblUbicacionDomo);
+            this.panelInfoDomo.Controls.Add(this.lblNombreDomo);
+            this.panelInfoDomo.Controls.Add(this.guna2PictureBox1);
+            this.panelInfoDomo.FillColor = System.Drawing.Color.White;
+            this.panelInfoDomo.Location = new System.Drawing.Point(292, 180);
+            this.panelInfoDomo.Name = "panelInfoDomo";
+            this.panelInfoDomo.ShadowDecoration.Enabled = true;
+            this.panelInfoDomo.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.panelInfoDomo.Size = new System.Drawing.Size(419, 177);
+            this.panelInfoDomo.TabIndex = 29;
+            // 
+            // lblUltimoEnvioDomo
+            // 
+            this.lblUltimoEnvioDomo.BackColor = System.Drawing.Color.Transparent;
+            this.lblUltimoEnvioDomo.Location = new System.Drawing.Point(35, 82);
+            this.lblUltimoEnvioDomo.Name = "lblUltimoEnvioDomo";
+            this.lblUltimoEnvioDomo.Size = new System.Drawing.Size(92, 15);
+            this.lblUltimoEnvioDomo.TabIndex = 23;
+            this.lblUltimoEnvioDomo.Text = "guna2HtmlLabel16";
+            // 
+            // lblUbicacionDomo
+            // 
+            this.lblUbicacionDomo.BackColor = System.Drawing.Color.Transparent;
+            this.lblUbicacionDomo.Location = new System.Drawing.Point(35, 134);
+            this.lblUbicacionDomo.Name = "lblUbicacionDomo";
+            this.lblUbicacionDomo.Size = new System.Drawing.Size(92, 15);
+            this.lblUbicacionDomo.TabIndex = 22;
+            this.lblUbicacionDomo.Text = "guna2HtmlLabel15";
+            // 
+            // lblNombreDomo
+            // 
+            this.lblNombreDomo.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreDomo.Location = new System.Drawing.Point(35, 32);
+            this.lblNombreDomo.Name = "lblNombreDomo";
+            this.lblNombreDomo.Size = new System.Drawing.Size(92, 15);
+            this.lblNombreDomo.TabIndex = 21;
+            this.lblNombreDomo.Text = "guna2HtmlLabel14";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(336, 21);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 14;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
+            // panelNav
+            // 
+            this.panelNav.AutoRoundedCorners = true;
+            this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(71)))));
+            this.panelNav.BorderRadius = 124;
+            this.panelNav.Controls.Add(this.btnCultivos);
+            this.panelNav.Controls.Add(this.btnHome);
+            this.panelNav.Controls.Add(this.btnDomos);
+            this.panelNav.Controls.Add(this.btnReportes);
+            this.panelNav.CustomBorderThickness = new System.Windows.Forms.Padding(25, 25, 0, 0);
+            this.panelNav.CustomizableEdges.BottomRight = false;
+            this.panelNav.CustomizableEdges.TopRight = false;
+            this.panelNav.Location = new System.Drawing.Point(1, 1);
+            this.panelNav.Name = "panelNav";
+            this.panelNav.Size = new System.Drawing.Size(250, 758);
+            this.panelNav.TabIndex = 19;
+            // 
+            // cmbSeleccionarDispositivo
+            // 
+            this.cmbSeleccionarDispositivo.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSeleccionarDispositivo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSeleccionarDispositivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSeleccionarDispositivo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSeleccionarDispositivo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSeleccionarDispositivo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbSeleccionarDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSeleccionarDispositivo.ItemHeight = 30;
+            this.cmbSeleccionarDispositivo.Location = new System.Drawing.Point(292, 121);
+            this.cmbSeleccionarDispositivo.Name = "cmbSeleccionarDispositivo";
+            this.cmbSeleccionarDispositivo.Size = new System.Drawing.Size(244, 36);
+            this.cmbSeleccionarDispositivo.TabIndex = 34;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Humnst777 BlkCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(292, 76);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(219, 28);
+            this.guna2HtmlLabel3.TabIndex = 35;
+            this.guna2HtmlLabel3.Text = "Seleccionar Dispositivo";
+            // 
+            // btnBuscarDispositivo
+            // 
+            this.btnBuscarDispositivo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscarDispositivo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscarDispositivo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBuscarDispositivo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBuscarDispositivo.Font = new System.Drawing.Font("Humnst777 BlkCn BT", 12F);
+            this.btnBuscarDispositivo.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarDispositivo.Location = new System.Drawing.Point(567, 120);
+            this.btnBuscarDispositivo.Name = "btnBuscarDispositivo";
+            this.btnBuscarDispositivo.Size = new System.Drawing.Size(111, 36);
+            this.btnBuscarDispositivo.TabIndex = 36;
+            this.btnBuscarDispositivo.Text = "Buscar";
+            // 
+            // chartInfoDomo
+            // 
+            chartFont1.FontName = "Arial";
+            this.chartInfoDomo.Legend.LabelFont = chartFont1;
+            this.chartInfoDomo.Location = new System.Drawing.Point(292, 382);
+            this.chartInfoDomo.Name = "chartInfoDomo";
+            this.chartInfoDomo.Size = new System.Drawing.Size(419, 260);
+            this.chartInfoDomo.TabIndex = 37;
+            chartFont2.FontName = "Arial";
+            chartFont2.Size = 12;
+            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.chartInfoDomo.Title.Font = chartFont2;
+            chartFont3.FontName = "Arial";
+            this.chartInfoDomo.Tooltips.BodyFont = chartFont3;
+            chartFont4.FontName = "Arial";
+            chartFont4.Size = 9;
+            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.chartInfoDomo.Tooltips.TitleFont = chartFont4;
+            this.chartInfoDomo.XAxes.GridLines = grid1;
+            chartFont5.FontName = "Arial";
+            tick1.Font = chartFont5;
+            this.chartInfoDomo.XAxes.Ticks = tick1;
+            this.chartInfoDomo.YAxes.GridLines = grid2;
+            chartFont6.FontName = "Arial";
+            tick2.Font = chartFont6;
+            this.chartInfoDomo.YAxes.Ticks = tick2;
+            this.chartInfoDomo.ZAxes.GridLines = grid3;
+            chartFont7.FontName = "Arial";
+            pointLabel1.Font = chartFont7;
+            this.chartInfoDomo.ZAxes.PointLabels = pointLabel1;
+            chartFont8.FontName = "Arial";
+            tick3.Font = chartFont8;
+            this.chartInfoDomo.ZAxes.Ticks = tick3;
+            // 
+            // dgvHistorialDatosDomo
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvHistorialDatosDomo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHistorialDatosDomo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorialDatosDomo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvHistorialDatosDomo.ColumnHeadersHeight = 4;
+            this.dgvHistorialDatosDomo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHistorialDatosDomo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvHistorialDatosDomo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvHistorialDatosDomo.Location = new System.Drawing.Point(732, 180);
+            this.dgvHistorialDatosDomo.Name = "dgvHistorialDatosDomo";
+            this.dgvHistorialDatosDomo.RowHeadersVisible = false;
+            this.dgvHistorialDatosDomo.Size = new System.Drawing.Size(425, 462);
+            this.dgvHistorialDatosDomo.TabIndex = 38;
+            this.dgvHistorialDatosDomo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvHistorialDatosDomo.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvHistorialDatosDomo.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvHistorialDatosDomo.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvHistorialDatosDomo.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvHistorialDatosDomo.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(242)))), ((int)(((byte)(232)))));
+            this.dgvHistorialDatosDomo.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvHistorialDatosDomo.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvHistorialDatosDomo.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvHistorialDatosDomo.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvHistorialDatosDomo.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvHistorialDatosDomo.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvHistorialDatosDomo.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvHistorialDatosDomo.ThemeStyle.ReadOnly = false;
+            this.dgvHistorialDatosDomo.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvHistorialDatosDomo.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvHistorialDatosDomo.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvHistorialDatosDomo.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvHistorialDatosDomo.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvHistorialDatosDomo.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvHistorialDatosDomo.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // btnExportarExcel
+            // 
+            this.btnExportarExcel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExportarExcel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExportarExcel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExportarExcel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExportarExcel.Font = new System.Drawing.Font("Humnst777 BlkCn BT", 12F);
+            this.btnExportarExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportarExcel.Location = new System.Drawing.Point(1015, 120);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(142, 36);
+            this.btnExportarExcel.TabIndex = 39;
+            this.btnExportarExcel.Text = "Exportar a Excel";
+            // 
+            // selecFecha
+            // 
+            this.selecFecha.Checked = true;
+            this.selecFecha.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.selecFecha.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.selecFecha.Location = new System.Drawing.Point(732, 120);
+            this.selecFecha.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.selecFecha.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.selecFecha.Name = "selecFecha";
+            this.selecFecha.Size = new System.Drawing.Size(200, 36);
+            this.selecFecha.TabIndex = 40;
+            this.selecFecha.Value = new System.DateTime(2025, 6, 20, 11, 29, 21, 9);
             // 
             // btnCultivos
             // 
@@ -82,12 +312,12 @@ namespace Domo_Admin
             this.btnCultivos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCultivos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCultivos.FillColor = System.Drawing.Color.Transparent;
-            this.btnCultivos.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCultivos.Font = new System.Drawing.Font("Humnst777 BlkCn BT", 18F);
             this.btnCultivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(168)))), ((int)(((byte)(181)))));
             this.btnCultivos.Location = new System.Drawing.Point(25, 270);
             this.btnCultivos.Name = "btnCultivos";
             this.btnCultivos.Size = new System.Drawing.Size(200, 45);
-            this.btnCultivos.TabIndex = 5;
+            this.btnCultivos.TabIndex = 44;
             this.btnCultivos.Text = "Cultivos";
             this.btnCultivos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -101,12 +331,12 @@ namespace Domo_Admin
             this.btnDomos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDomos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDomos.FillColor = System.Drawing.Color.Transparent;
-            this.btnDomos.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnDomos.Font = new System.Drawing.Font("Humnst777 BlkCn BT", 18F);
             this.btnDomos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(168)))), ((int)(((byte)(181)))));
             this.btnDomos.Location = new System.Drawing.Point(25, 220);
             this.btnDomos.Name = "btnDomos";
             this.btnDomos.Size = new System.Drawing.Size(200, 45);
-            this.btnDomos.TabIndex = 4;
+            this.btnDomos.TabIndex = 43;
             this.btnDomos.Text = "Domos";
             this.btnDomos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -120,12 +350,12 @@ namespace Domo_Admin
             this.btnReportes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnReportes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnReportes.FillColor = System.Drawing.Color.Transparent;
-            this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnReportes.Font = new System.Drawing.Font("Humnst777 BlkCn BT", 18F);
             this.btnReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(168)))), ((int)(((byte)(181)))));
             this.btnReportes.Location = new System.Drawing.Point(25, 170);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(200, 45);
-            this.btnReportes.TabIndex = 3;
+            this.btnReportes.TabIndex = 42;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -139,294 +369,88 @@ namespace Domo_Admin
             this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnHome.FillColor = System.Drawing.Color.Transparent;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnHome.Font = new System.Drawing.Font("Humnst777 BlkCn BT", 18F);
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(168)))), ((int)(((byte)(181)))));
             this.btnHome.Location = new System.Drawing.Point(25, 120);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(200, 45);
-            this.btnHome.TabIndex = 2;
+            this.btnHome.TabIndex = 41;
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // panelClimaHoy
+            // lblUltimaTemperatura
             // 
-            this.panelClimaHoy.Controls.Add(this.guna2HtmlLabel16);
-            this.panelClimaHoy.Controls.Add(this.guna2HtmlLabel15);
-            this.panelClimaHoy.Controls.Add(this.guna2HtmlLabel14);
-            this.panelClimaHoy.Controls.Add(this.guna2PictureBox1);
-            this.panelClimaHoy.Location = new System.Drawing.Point(292, 180);
-            this.panelClimaHoy.Name = "panelClimaHoy";
-            this.panelClimaHoy.Size = new System.Drawing.Size(419, 177);
-            this.panelClimaHoy.TabIndex = 29;
+            this.lblUltimaTemperatura.BackColor = System.Drawing.Color.Transparent;
+            this.lblUltimaTemperatura.Location = new System.Drawing.Point(300, 82);
+            this.lblUltimaTemperatura.Name = "lblUltimaTemperatura";
+            this.lblUltimaTemperatura.Size = new System.Drawing.Size(86, 15);
+            this.lblUltimaTemperatura.TabIndex = 24;
+            this.lblUltimaTemperatura.Text = "guna2HtmlLabel1";
             // 
-            // guna2HtmlLabel16
+            // lblUltimaHumedadAmb
             // 
-            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(163, 78);
-            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            this.guna2HtmlLabel16.Size = new System.Drawing.Size(92, 15);
-            this.guna2HtmlLabel16.TabIndex = 23;
-            this.guna2HtmlLabel16.Text = "guna2HtmlLabel16";
+            this.lblUltimaHumedadAmb.BackColor = System.Drawing.Color.Transparent;
+            this.lblUltimaHumedadAmb.Location = new System.Drawing.Point(300, 103);
+            this.lblUltimaHumedadAmb.Name = "lblUltimaHumedadAmb";
+            this.lblUltimaHumedadAmb.Size = new System.Drawing.Size(86, 15);
+            this.lblUltimaHumedadAmb.TabIndex = 25;
+            this.lblUltimaHumedadAmb.Text = "guna2HtmlLabel1";
             // 
-            // guna2HtmlLabel15
+            // lblUltimaHumedadTierra
             // 
-            this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(15, 121);
-            this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(92, 15);
-            this.guna2HtmlLabel15.TabIndex = 22;
-            this.guna2HtmlLabel15.Text = "guna2HtmlLabel15";
-            // 
-            // guna2HtmlLabel14
-            // 
-            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(15, 39);
-            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(92, 15);
-            this.guna2HtmlLabel14.TabIndex = 21;
-            this.guna2HtmlLabel14.Text = "guna2HtmlLabel14";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(336, 21);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.guna2PictureBox1.TabIndex = 14;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(292, 141);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(54, 15);
-            this.guna2HtmlLabel1.TabIndex = 23;
-            this.guna2HtmlLabel1.Text = "Dispositivo";
-            // 
-            // panelNav
-            // 
-            this.panelNav.AutoRoundedCorners = true;
-            this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(71)))));
-            this.panelNav.BorderRadius = 124;
-            this.panelNav.Controls.Add(this.guna2Panel1);
-            this.panelNav.Controls.Add(this.btnCultivos);
-            this.panelNav.Controls.Add(this.btnDomos);
-            this.panelNav.Controls.Add(this.btnReportes);
-            this.panelNav.Controls.Add(this.btnHome);
-            this.panelNav.CustomBorderThickness = new System.Windows.Forms.Padding(25, 25, 0, 0);
-            this.panelNav.CustomizableEdges.BottomRight = false;
-            this.panelNav.CustomizableEdges.TopRight = false;
-            this.panelNav.Location = new System.Drawing.Point(1, 1);
-            this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(250, 758);
-            this.panelNav.TabIndex = 19;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel1.BorderRadius = 2;
-            this.guna2Panel1.Location = new System.Drawing.Point(250, 50);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(930, 80);
-            this.guna2Panel1.TabIndex = 2;
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(362, 121);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(160, 36);
-            this.guna2ComboBox1.TabIndex = 34;
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(292, 121);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(59, 15);
-            this.guna2HtmlLabel3.TabIndex = 35;
-            this.guna2HtmlLabel3.Text = "Seleccionar";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(554, 120);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(157, 36);
-            this.guna2Button1.TabIndex = 36;
-            this.guna2Button1.Text = "guna2Button1";
-            // 
-            // gunaChart1
-            // 
-            chartFont1.FontName = "Arial";
-            this.gunaChart1.Legend.LabelFont = chartFont1;
-            this.gunaChart1.Location = new System.Drawing.Point(292, 382);
-            this.gunaChart1.Name = "gunaChart1";
-            this.gunaChart1.Size = new System.Drawing.Size(419, 260);
-            this.gunaChart1.TabIndex = 37;
-            chartFont2.FontName = "Arial";
-            chartFont2.Size = 12;
-            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart1.Title.Font = chartFont2;
-            chartFont3.FontName = "Arial";
-            this.gunaChart1.Tooltips.BodyFont = chartFont3;
-            chartFont4.FontName = "Arial";
-            chartFont4.Size = 9;
-            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart1.Tooltips.TitleFont = chartFont4;
-            this.gunaChart1.XAxes.GridLines = grid1;
-            chartFont5.FontName = "Arial";
-            tick1.Font = chartFont5;
-            this.gunaChart1.XAxes.Ticks = tick1;
-            this.gunaChart1.YAxes.GridLines = grid2;
-            chartFont6.FontName = "Arial";
-            tick2.Font = chartFont6;
-            this.gunaChart1.YAxes.Ticks = tick2;
-            this.gunaChart1.ZAxes.GridLines = grid3;
-            chartFont7.FontName = "Arial";
-            pointLabel1.Font = chartFont7;
-            this.gunaChart1.ZAxes.PointLabels = pointLabel1;
-            chartFont8.FontName = "Arial";
-            tick3.Font = chartFont8;
-            this.gunaChart1.ZAxes.Ticks = tick3;
-            // 
-            // guna2DataGridView1
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(732, 180);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(425, 462);
-            this.guna2DataGridView1.TabIndex = 38;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(977, 120);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(180, 36);
-            this.guna2Button2.TabIndex = 39;
-            this.guna2Button2.Text = "guna2Button2";
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(732, 120);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(200, 36);
-            this.guna2DateTimePicker1.TabIndex = 40;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 6, 20, 11, 29, 21, 9);
+            this.lblUltimaHumedadTierra.BackColor = System.Drawing.Color.Transparent;
+            this.lblUltimaHumedadTierra.Location = new System.Drawing.Point(300, 124);
+            this.lblUltimaHumedadTierra.Name = "lblUltimaHumedadTierra";
+            this.lblUltimaHumedadTierra.Size = new System.Drawing.Size(86, 15);
+            this.lblUltimaHumedadTierra.TabIndex = 26;
+            this.lblUltimaHumedadTierra.Text = "guna2HtmlLabel1";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 761);
-            this.Controls.Add(this.guna2DateTimePicker1);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2DataGridView1);
-            this.Controls.Add(this.gunaChart1);
-            this.Controls.Add(this.guna2Button1);
+            this.ClientSize = new System.Drawing.Size(1184, 749);
+            this.Controls.Add(this.selecFecha);
+            this.Controls.Add(this.btnExportarExcel);
+            this.Controls.Add(this.dgvHistorialDatosDomo);
+            this.Controls.Add(this.chartInfoDomo);
+            this.Controls.Add(this.btnBuscarDispositivo);
             this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.guna2ComboBox1);
-            this.Controls.Add(this.panelClimaHoy);
-            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.cmbSeleccionarDispositivo);
+            this.Controls.Add(this.panelInfoDomo);
             this.Controls.Add(this.panelNav);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.panelClimaHoy.ResumeLayout(false);
-            this.panelClimaHoy.PerformLayout();
+            this.panelInfoDomo.ResumeLayout(false);
+            this.panelInfoDomo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panelNav.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialDatosDomo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private Guna.UI2.WinForms.Guna2Panel panelInfoDomo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUltimoEnvioDomo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUbicacionDomo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblNombreDomo;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel panelNav;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbSeleccionarDispositivo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2Button btnBuscarDispositivo;
+        private Guna.Charts.WinForms.GunaChart chartInfoDomo;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvHistorialDatosDomo;
+        private Guna.UI2.WinForms.Guna2Button btnExportarExcel;
+        private Guna.UI2.WinForms.Guna2DateTimePicker selecFecha;
         private Guna.UI2.WinForms.Guna2Button btnCultivos;
+        private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2Button btnDomos;
         private Guna.UI2.WinForms.Guna2Button btnReportes;
-        private Guna.UI2.WinForms.Guna2Button btnHome;
-        private Guna.UI2.WinForms.Guna2Panel panelClimaHoy;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Panel panelNav;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.Charts.WinForms.GunaChart gunaChart1;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUltimaHumedadTierra;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUltimaHumedadAmb;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUltimaTemperatura;
     }
 }

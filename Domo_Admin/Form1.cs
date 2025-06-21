@@ -21,5 +21,10 @@ namespace Domo_Admin
         {
 
         }
+
+        private void guna2Panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
