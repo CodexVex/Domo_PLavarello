@@ -388,7 +388,7 @@
             this.guna2Panel6.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
             this.guna2Panel6.Size = new System.Drawing.Size(190, 120);
             this.guna2Panel6.TabIndex = 10;
-            this.guna2Panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel6_Paint);
+            
             // 
             // guna2PictureBox7
             // 

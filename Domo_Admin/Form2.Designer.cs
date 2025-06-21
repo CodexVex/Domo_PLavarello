@@ -57,7 +57,7 @@ namespace Domo_Admin
             this.cmbSeleccionarDispositivo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnBuscarDispositivo = new Guna.UI2.WinForms.Guna2Button();
-            this.chartInfoDomo = new Guna.Charts.WinForms.GunaChart();
+            this.chartReporteDomo = new Guna.Charts.WinForms.GunaChart();
             this.dgvHistorialDatosDomo = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnExportarExcel = new Guna.UI2.WinForms.Guna2Button();
             this.selecFecha = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -68,6 +68,9 @@ namespace Domo_Admin
             this.lblUltimaTemperatura = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblUltimaHumedadAmb = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblUltimaHumedadTierra = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ckbTempAmb = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.ckbHumedadAmb = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.ckbHumedadTierra = new Guna.UI2.WinForms.Guna2CheckBox();
             this.panelInfoDomo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelNav.SuspendLayout();
@@ -77,7 +80,7 @@ namespace Domo_Admin
             // panelInfoDomo
             // 
             this.panelInfoDomo.BackColor = System.Drawing.Color.Transparent;
-            this.panelInfoDomo.BorderRadius = 6;
+            this.panelInfoDomo.BorderRadius = 10;
             this.panelInfoDomo.Controls.Add(this.lblUltimaHumedadTierra);
             this.panelInfoDomo.Controls.Add(this.lblUltimaHumedadAmb);
             this.panelInfoDomo.Controls.Add(this.lblUltimaTemperatura);
@@ -88,6 +91,7 @@ namespace Domo_Admin
             this.panelInfoDomo.FillColor = System.Drawing.Color.White;
             this.panelInfoDomo.Location = new System.Drawing.Point(292, 180);
             this.panelInfoDomo.Name = "panelInfoDomo";
+            this.panelInfoDomo.ShadowDecoration.BorderRadius = 15;
             this.panelInfoDomo.ShadowDecoration.Enabled = true;
             this.panelInfoDomo.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
             this.panelInfoDomo.Size = new System.Drawing.Size(419, 177);
@@ -154,6 +158,7 @@ namespace Domo_Admin
             // cmbSeleccionarDispositivo
             // 
             this.cmbSeleccionarDispositivo.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSeleccionarDispositivo.BorderRadius = 10;
             this.cmbSeleccionarDispositivo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbSeleccionarDispositivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSeleccionarDispositivo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -178,6 +183,7 @@ namespace Domo_Admin
             // 
             // btnBuscarDispositivo
             // 
+            this.btnBuscarDispositivo.BorderRadius = 15;
             this.btnBuscarDispositivo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBuscarDispositivo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBuscarDispositivo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -186,43 +192,44 @@ namespace Domo_Admin
             this.btnBuscarDispositivo.ForeColor = System.Drawing.Color.White;
             this.btnBuscarDispositivo.Location = new System.Drawing.Point(567, 120);
             this.btnBuscarDispositivo.Name = "btnBuscarDispositivo";
+            this.btnBuscarDispositivo.ShadowDecoration.BorderRadius = 25;
             this.btnBuscarDispositivo.Size = new System.Drawing.Size(111, 36);
             this.btnBuscarDispositivo.TabIndex = 36;
             this.btnBuscarDispositivo.Text = "Buscar";
             // 
-            // chartInfoDomo
+            // chartReporteDomo
             // 
             chartFont1.FontName = "Arial";
-            this.chartInfoDomo.Legend.LabelFont = chartFont1;
-            this.chartInfoDomo.Location = new System.Drawing.Point(292, 382);
-            this.chartInfoDomo.Name = "chartInfoDomo";
-            this.chartInfoDomo.Size = new System.Drawing.Size(419, 260);
-            this.chartInfoDomo.TabIndex = 37;
+            this.chartReporteDomo.Legend.LabelFont = chartFont1;
+            this.chartReporteDomo.Location = new System.Drawing.Point(292, 382);
+            this.chartReporteDomo.Name = "chartReporteDomo";
+            this.chartReporteDomo.Size = new System.Drawing.Size(419, 260);
+            this.chartReporteDomo.TabIndex = 37;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
             chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.chartInfoDomo.Title.Font = chartFont2;
+            this.chartReporteDomo.Title.Font = chartFont2;
             chartFont3.FontName = "Arial";
-            this.chartInfoDomo.Tooltips.BodyFont = chartFont3;
+            this.chartReporteDomo.Tooltips.BodyFont = chartFont3;
             chartFont4.FontName = "Arial";
             chartFont4.Size = 9;
             chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.chartInfoDomo.Tooltips.TitleFont = chartFont4;
-            this.chartInfoDomo.XAxes.GridLines = grid1;
+            this.chartReporteDomo.Tooltips.TitleFont = chartFont4;
+            this.chartReporteDomo.XAxes.GridLines = grid1;
             chartFont5.FontName = "Arial";
             tick1.Font = chartFont5;
-            this.chartInfoDomo.XAxes.Ticks = tick1;
-            this.chartInfoDomo.YAxes.GridLines = grid2;
+            this.chartReporteDomo.XAxes.Ticks = tick1;
+            this.chartReporteDomo.YAxes.GridLines = grid2;
             chartFont6.FontName = "Arial";
             tick2.Font = chartFont6;
-            this.chartInfoDomo.YAxes.Ticks = tick2;
-            this.chartInfoDomo.ZAxes.GridLines = grid3;
+            this.chartReporteDomo.YAxes.Ticks = tick2;
+            this.chartReporteDomo.ZAxes.GridLines = grid3;
             chartFont7.FontName = "Arial";
             pointLabel1.Font = chartFont7;
-            this.chartInfoDomo.ZAxes.PointLabels = pointLabel1;
+            this.chartReporteDomo.ZAxes.PointLabels = pointLabel1;
             chartFont8.FontName = "Arial";
             tick3.Font = chartFont8;
-            this.chartInfoDomo.ZAxes.Ticks = tick3;
+            this.chartReporteDomo.ZAxes.Ticks = tick3;
             // 
             // dgvHistorialDatosDomo
             // 
@@ -277,6 +284,7 @@ namespace Domo_Admin
             // 
             // btnExportarExcel
             // 
+            this.btnExportarExcel.BorderRadius = 15;
             this.btnExportarExcel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnExportarExcel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnExportarExcel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -291,6 +299,7 @@ namespace Domo_Admin
             // 
             // selecFecha
             // 
+            this.selecFecha.BorderRadius = 10;
             this.selecFecha.Checked = true;
             this.selecFecha.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.selecFecha.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -405,15 +414,69 @@ namespace Domo_Admin
             this.lblUltimaHumedadTierra.TabIndex = 26;
             this.lblUltimaHumedadTierra.Text = "guna2HtmlLabel1";
             // 
+            // ckbTempAmb
+            // 
+            this.ckbTempAmb.AutoSize = true;
+            this.ckbTempAmb.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ckbTempAmb.CheckedState.BorderRadius = 0;
+            this.ckbTempAmb.CheckedState.BorderThickness = 0;
+            this.ckbTempAmb.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ckbTempAmb.Location = new System.Drawing.Point(327, 663);
+            this.ckbTempAmb.Name = "ckbTempAmb";
+            this.ckbTempAmb.Size = new System.Drawing.Size(135, 17);
+            this.ckbTempAmb.TabIndex = 42;
+            this.ckbTempAmb.Text = "Temperatura Ambiental";
+            this.ckbTempAmb.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ckbTempAmb.UncheckedState.BorderRadius = 0;
+            this.ckbTempAmb.UncheckedState.BorderThickness = 0;
+            this.ckbTempAmb.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // ckbHumedadAmb
+            // 
+            this.ckbHumedadAmb.AutoSize = true;
+            this.ckbHumedadAmb.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ckbHumedadAmb.CheckedState.BorderRadius = 0;
+            this.ckbHumedadAmb.CheckedState.BorderThickness = 0;
+            this.ckbHumedadAmb.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ckbHumedadAmb.Location = new System.Drawing.Point(462, 663);
+            this.ckbHumedadAmb.Name = "ckbHumedadAmb";
+            this.ckbHumedadAmb.Size = new System.Drawing.Size(121, 17);
+            this.ckbHumedadAmb.TabIndex = 43;
+            this.ckbHumedadAmb.Text = "Humedad Ambiental";
+            this.ckbHumedadAmb.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ckbHumedadAmb.UncheckedState.BorderRadius = 0;
+            this.ckbHumedadAmb.UncheckedState.BorderThickness = 0;
+            this.ckbHumedadAmb.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // ckbHumedadTierra
+            // 
+            this.ckbHumedadTierra.AutoSize = true;
+            this.ckbHumedadTierra.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ckbHumedadTierra.CheckedState.BorderRadius = 0;
+            this.ckbHumedadTierra.CheckedState.BorderThickness = 0;
+            this.ckbHumedadTierra.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ckbHumedadTierra.Location = new System.Drawing.Point(600, 663);
+            this.ckbHumedadTierra.Name = "ckbHumedadTierra";
+            this.ckbHumedadTierra.Size = new System.Drawing.Size(102, 17);
+            this.ckbHumedadTierra.TabIndex = 44;
+            this.ckbHumedadTierra.Text = "Humedad Tierra";
+            this.ckbHumedadTierra.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ckbHumedadTierra.UncheckedState.BorderRadius = 0;
+            this.ckbHumedadTierra.UncheckedState.BorderThickness = 0;
+            this.ckbHumedadTierra.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 749);
+            this.Controls.Add(this.ckbHumedadTierra);
+            this.Controls.Add(this.ckbHumedadAmb);
+            this.Controls.Add(this.ckbTempAmb);
             this.Controls.Add(this.selecFecha);
             this.Controls.Add(this.btnExportarExcel);
             this.Controls.Add(this.dgvHistorialDatosDomo);
-            this.Controls.Add(this.chartInfoDomo);
+            this.Controls.Add(this.chartReporteDomo);
             this.Controls.Add(this.btnBuscarDispositivo);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.cmbSeleccionarDispositivo);
@@ -441,7 +504,7 @@ namespace Domo_Admin
         private Guna.UI2.WinForms.Guna2ComboBox cmbSeleccionarDispositivo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2Button btnBuscarDispositivo;
-        private Guna.Charts.WinForms.GunaChart chartInfoDomo;
+        private Guna.Charts.WinForms.GunaChart chartReporteDomo;
         private Guna.UI2.WinForms.Guna2DataGridView dgvHistorialDatosDomo;
         private Guna.UI2.WinForms.Guna2Button btnExportarExcel;
         private Guna.UI2.WinForms.Guna2DateTimePicker selecFecha;
@@ -452,5 +515,8 @@ namespace Domo_Admin
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUltimaHumedadTierra;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUltimaHumedadAmb;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUltimaTemperatura;
+        private Guna.UI2.WinForms.Guna2CheckBox ckbTempAmb;
+        private Guna.UI2.WinForms.Guna2CheckBox ckbHumedadAmb;
+        private Guna.UI2.WinForms.Guna2CheckBox ckbHumedadTierra;
     }
 }
