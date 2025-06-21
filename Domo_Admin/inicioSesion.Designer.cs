@@ -1,6 +1,6 @@
 ﻿namespace Domo_Admin
 {
-    partial class inicioSesion
+    partial class InicioSesion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inicioSesion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesion));
             this.panelNav = new Guna.UI2.WinForms.Guna2Panel();
             this.txtbUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtbContrasena = new Guna.UI2.WinForms.Guna2TextBox();

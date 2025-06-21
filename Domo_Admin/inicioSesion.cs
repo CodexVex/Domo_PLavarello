@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Domo_Admin
 {
-    public partial class inicioSesion : Form
+    public partial class InicioSesion : Form
     {
-        public inicioSesion()
+        public InicioSesion()
         {
             InitializeComponent();
         }
+
     }
 }
